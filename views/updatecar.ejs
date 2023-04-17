@@ -1,0 +1,72 @@
+<% if (info !=null || info !== undefined) { %>
+    <div class="alert alert-success" role="alert">
+      <h4 class="alert-heading">Well done!</h4>
+      <div><i class="bi bi-check-all me-3"></i><%= info %></div>
+      <hr />
+      <a href="/" class="mb-0 btn btn-secondary">Back</a>
+    </div>
+    <% } %>
+    <h2>Update Car Information</h2>
+    <form
+      action="/update/<%= data.id %> "
+      method="post"
+      enctype="multipart/form-data"
+    >
+      <div class="row bg-light mt-3 px-2 pt-3" style="width: 80%">
+        <div class="col-md-12">
+          <div class="mb-3 row">
+            <label for="staticEmail" class="col-sm-2 col-form-label">Nama</label>
+            <div class="col-sm-10">
+              <input type="text" name="name" class="form-control" id="staticEmail" placeholder="Avanza" value="<%= data.name %>" required/>
+            </div>
+          </div>
+          <div class="mb-3 row">
+            <label for="inputPassword" class="col-sm-2 col-form-label">Sewa Per hari</label>
+            <div class="col-sm-10">
+              <input type="text" name="price" class="form-control" id="inputPassword" placeholder="Rp 0,-" value="<%= data.price%>" required/>
+            </div>
+          </div>
+          <div class="mb-3 row">
+            <label for="staticType" class="col-sm-2 col-form-label">Tipe</label>
+            <div class="col-sm-10">
+              <select id="staticType" class="form-select text-secondary" name="type">
+                <option value="<%= data.type %> " selected hidden>
+                  <%= data.type %>
+                </option>
+                <option value="SUV">SUV</option>
+                <option value="Hatchback">Hatchback</option>
+                <option value="Sport Car">Sport Car</option>
+              </select>
+            </div>
+          </div>
+          <div class="mb-3 row">
+            <label for="staticUkuran" class="col-sm-2 col-form-label">Ukuran</label>
+            <div class="col-sm-10">
+              <select name="size" id="staticUkuran"class="form-select text-secondary">
+                <option value="<%= data.size %> " selected hidden>
+                  <%= data.size %>
+                </option>
+                <option value="small">Small</option>
+                <option value="medium">Medium</option>
+                <option value="large">Large</option>
+              </select>
+            </div>
+          </div>
+          <div class="mb-3 row">
+            <label for="staticEmail" class="col-sm-2 col-form-label">Foto</label>
+            <div class="col-sm-10">
+              <div class="input-group">
+                <input type="image" name="edited-photo" class="form-control" id="staticEmail" src="/cars/<%= data.image %>" disabled/>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row mt-5" style="margin-top: 150px !important">
+        <div class="d-grid gap-3 d-md-block">
+          <a href="/" class="btn btn-outline-primary me-3" role="button">Cancel</a>
+          <button class="btn btn-primary" type="submit">Save</button>
+        </div>
+      </div>
+    </form>
+    

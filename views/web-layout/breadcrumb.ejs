@@ -1,0 +1,16 @@
+<nav style="--bs-breadcrumb-divider: '>'" aria-label="breadcrumb">
+    <ol class="breadcrumb">
+      <li class="breadcrumb-item"><a href="#">Cars</a></li>
+      <li class="breadcrumb-item active" aria-current="page">List Car</li>
+      <% if (title === "Create New Car") { %>
+      <li class="breadcrumb-item active" aria-current="page">Create New Car</li>
+      <% }else if (title === "Update Car") { %>
+      <li class="breadcrumb-item active" aria-current="page">Update Car</li>
+      <% }else if (title === "Update Car"){%>
+      <li class="breadcrumb-item active" aria-current="page">Edit Car</li>
+      <% }else if (title === "Delete Car"){%>
+      <li class="breadcrumb-item active" aria-current="page">Delete Car</li>
+      <% } %>
+    </ol>
+  </nav>
+  
