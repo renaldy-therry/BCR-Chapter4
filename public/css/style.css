@@ -1,0 +1,110 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'IBM Plex Sans', sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+  
+  /* Top Navbar */
+  .top-navbar{
+    position: flex;
+    margin-left: -10px;
+    width: 85px;
+    box-sizing: border-box;
+    background: #0D28A6;
+  }
+  .top-navbar ul{
+    margin-left: -15px;
+  }
+  .top-navbar ul li{
+    margin-bottom: 5px;
+    
+  }
+  .top-navbar ul li a{
+    text-decoration: none;
+    color: white;
+  }
+  .top-navbar ul li a img{
+    margin-left: 12px;
+  }
+  .top-navbar .nav .nav-item .nav-link{
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  
+  }
+  .top-navbar .nav .nav-item .nav-link:hover{
+    background: rgba(255, 255, 255, 0.3);
+  }
+  .top-navbar .nav .nav-item .nav-link.nyala{
+    background: rgba(255, 255, 255, 0.3);
+  }
+  /* End Vertical Navbar */
+  
+  /* Sidebar */
+  .sidebar{
+    background-color:   #FFFFFF;
+    width: 230px;
+    margin-left: -40px;
+    padding: 9px 0px 0px 20px;
+    display: flex;
+    box-sizing: border-box;
+    flex-direction: column;
+  }
+  .col-md-2.sidebar-hide{
+    transition: 0.3s;
+    width: 0;
+    display: none;
+  }
+  .sidebar a{
+    text-decoration: none;
+  }
+  .sidebar .main-sidebar .list-item .description{
+    font-style: normal;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 16px;
+    text-align: center;
+    color: black;
+  }
+  .sidebar .main-sidebar .list-item{
+    padding: 11px 24px;
+    border-radius: 8px;
+    box-sizing: border-box;
+  }
+  
+  .sidebar .main-sidebar .list-item:hover{
+    background-color: #CFD4ED;
+    transition: all ease-in .2s;
+  }
+  
+  /* End Sidebar */
+  
+  /* Header */
+  .header{
+    background-color: #FFFFFF;
+  }
+  
+  /* Toogle Menu */
+  #menu-button{
+    width: 32px;
+    position: absolute;
+    overflow: hidden;
+  }
+  #label-menu{
+    position: relative;
+    display: block;
+    height: 20px;
+    cursor: pointer;
+  }
+  #checkbox-menu{
+    display: none;
+  }
+  /*End Toogle Menu */
+  /* End Header */
